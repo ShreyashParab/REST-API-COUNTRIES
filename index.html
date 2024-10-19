@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REST API</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="nav" id="nav">
+        <div class="innerNav">
+            <div class="title">
+                Where in The World?
+            </div>
+            <div class="mode" id="mode">
+                <span class="modeChange" title="Dark Theme">
+                    <i class="fa-regular fa-moon"></i>&nbsp;
+                    Dark Mode
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="upperContainer" id="upperContainer">
+            <div class="searchBox" id="search">
+                <span>
+                    <i class="fas fa-search"></i>
+                </span>
+                <input type="text" id="search-box" placeholder="Search for a country...">
+            </div>
+            <div class="filter" id="filter">
+                <select name="region" id="region">
+                    <option class="options"  value="" selected hidden>Filter by Region</option>
+                    <option class="options" value="Africa">Africa</option>
+                    <option class="options" value="America">America</option>
+                    <option class="options" value="Asia">Asia</option>
+                    <option class="options" value="Europe">Europe</option>
+                    <option class="options" value="Ocenia">Ocenia</option>
+                </select>
+            </div>
+        </div>
+        <div class="lowerContainer" id="countryContainer">
+            
+        </div>
+        <div class="detailsContainer" id="detailsContainer">
+            <div class="backButton" id="backButton"> 
+                <div class="backButtonImg" id="backButtonImg">
+                    <img src="assets/arrow.png" alt="back arrow">
+                </div>
+                <span>Back</span>
+            </div>
+            <div class="countryDetails" id="countryDetails">
+                
+            </div>
+        </div>
+        
+        
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/55733442d5.js" crossorigin="anonymous"></script>
+</body>
+</html>
