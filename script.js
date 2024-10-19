@@ -226,6 +226,23 @@ fetchCounteries()
 mode.addEventListener('click', () => {
     stateChange = !stateChange;
 
+    document.body.style.transition = 'background-color 0.5s ease, color 0.5s ease';
+    document.getElementById('nav').style.transition = 'background-color 0.5s ease';
+    document.getElementById('search').style.transition = 'background-color 0.5s ease, color 0.5s ease';
+    document.getElementById('region').style.transition = 'background-color 0.5s ease, color 0.5s ease';
+    backButton.style.transition = 'background-color 0.5s ease';
+
+    let search = document.getElementById('search-box');
+    search.style.transition = 'background-color 0.5s ease, color 0.5s ease';
+
+    let regionSelect = document.getElementById('region');
+    regionSelect.style.transition = 'background-color 0.5s ease, color 0.5s ease';
+
+    let cards = document.getElementsByClassName('card');
+    for (let i = 0; i < cards.length; i++) {
+        cards[i].style.transition = 'background-color 0.5s ease';
+    }
+
     if (stateChange) {
         // Dark Mode
         mode.innerHTML = `
