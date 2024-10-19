@@ -250,6 +250,18 @@ select option{
     .lowerContainer{
         grid-template-columns: auto auto;
     }
+
+    .detailsContainer{
+        margin-bottom: 1rem;
+    }
+
+    .countryDetails{
+        flex-direction: column;
+    }
+
+    .flagInDetail, .mainDetails{
+        width: 90%;
+    }
 }
 
 @media (max-width:426px){
