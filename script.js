@@ -87,28 +87,29 @@ const displayCounteries = (counteries) =>{
 
 }
 
-searchBox.addEventListener('input',()=>{
-    let searchCountry = searchBox.value
-    let searchCardData = data.filter((country)=>{
-        if(country.name.toLowerCase().includes(searchCountry)){
-            return country
-        }
-    })  
-
-    displayCounteries(searchCardData)
-})
-
-searchBox.addEventListener('touchstart', () => {
-    // Same search functionality here
-    let searchCountry = searchBox.value
-    let searchCardData = data.filter((country)=>{
-        if(country.name.toLowerCase().includes(searchCountry)){
-            return country
-        }
-    })  
-
-    displayCounteries(searchCardData)
+let debounceTimeout;
+searchBox.addEventListener('input', () => {
+    clearTimeout(debounceTimeout);
+    debounceTimeout = setTimeout(() => {
+        let searchCountry = searchBox.value.trim().toLowerCase();
+        let searchCardData = data.filter((country) => {
+            return country.name.toLowerCase().includes(searchCountry);
+        });
+        displayCounteries(searchCardData);
+    }, 300);
 });
+
+// searchBox.addEventListener('input',()=>{
+//     let searchCountry = searchBox.value
+//     let searchCardData = data.filter((country)=>{
+//         if(country.name.toLowerCase().includes(searchCountry)){
+//             return country
+//         }
+//     })  
+
+//     displayCounteries(searchCardData)
+// })
+
 
 filterBox.addEventListener('change',()=>{
     let selectedRegion = filterBox.value.toLowerCase()
