@@ -98,6 +98,18 @@ searchBox.addEventListener('input',()=>{
     displayCounteries(searchCardData)
 })
 
+searchBox.addEventListener('touchstart', () => {
+    // Same search functionality here
+    let searchCountry = searchBox.value
+    let searchCardData = data.filter((country)=>{
+        if(country.name.toLowerCase().includes(searchCountry)){
+            return country
+        }
+    })  
+
+    displayCounteries(searchCardData)
+});
+
 filterBox.addEventListener('change',()=>{
     let selectedRegion = filterBox.value.toLowerCase()
     let filterCardData = data.filter((country)=>{
