@@ -264,7 +264,7 @@ select option{
     }
 }
 
-@media (max-width:426px){
+@media (max-width:500px){
 
     .nav .title{
         font-weight: 800;
